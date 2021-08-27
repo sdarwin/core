@@ -158,7 +158,7 @@ jobs:
               python3 get-pip.py
             else
               echo "Installing pip package"
-              apt-get install python3-pip
+              apt-get install -y python3-pip
             fi
 
             # install git:
