@@ -152,11 +152,11 @@ jobs:
             # install pip:
             python_version=$(python3 -c 'import sys; print("{0.major}.{0.minor}".format(sys.version_info))')
             if python3 -c "import sys; result = 0 if float($python_version) < float(3.6) else 1; sys.exit(result)"; then
-              echo "get-pip.py"
+              echo "Installing pip with get-pip.py"
               wget https://bootstrap.pypa.io/pip/$python_version/get-pip.py
               python3 get-pip.py
             else
-              echo "pip package"
+              echo "Installing pip package"
               apt-get install python3-pip
             fi
 
